@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+<input type = 'text' id = 't1'><br>
+<input type = 'button' id = 'b1' value = 'add'><br>
+<input type= 'button' id = 'b2' value = 'remove'><br>
+<input type="radio" id = 'rb1' name = 'select' value = "element">element<br>
+<input type="radio" id = 'rb2' name = 'select'value = "event">event<br>
+</body>
+<script>
+document.getElementById('b1').addEventListener('click',function(){
+	if(document.getElementById('rb1').checked)
+	{
+		document.getElementById('t1').value = 'code here';
+
+	}
+	else if(document.getElementById('rb2').checked)
+	{
+		document.getElementById('t1').value = 'event wala code here';
+
+	}
+});
+
+document.getElementById('b2').addEventListener('click',function(){
+	document.getElementById('t1').value = '';
+});
+</script>
+</html>

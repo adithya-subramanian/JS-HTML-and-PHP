@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+i = 0;
+function abc()
+{
+	if(i == 0)
+	{
+		bt1 = document.createElement('button');
+		t1 = document.createTextNode('click');
+		bt1.appendChild(t1);
+		bt1.setAttribute('id','bt1');
+		document.body.appendChild(bt1);
+		//document.getElementById("myBtn").disabled = true;
+		i = i + 1;
+    }
+}
+</script>
+</head>
+<body>
+<input type = 'button' id = 'myBtn' value="click" onclick='abc()'>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+</head>
+<body>
+<textarea id = 't1'></textarea><br>
+<input type = 'button' id = 'b1' value = 'add'><br>
+<input type= 'button' id = 'b2' value = 'remove'><br>
+<input type="radio" id = 'rb1' name = 'select' value = "element">element<br>
+<input type="radio" id = 'rb2' name = 'select'value = "event">event<br>
+</body>
+<script>
+document.getElementById('b1').addEventListener('click',function(){
+	if(document.getElementById('rb1').checked)
+	{
+		t2 = document.createTextNode('code here');
+		console.log('gg');
+		document.getElementById('t1').appendChild(t2);
+	}
+	else if(document.getElementById('rb2').checked)
+	{
+		t3 = document.createTextNode('event wala code here');
+		document.getElementById('t1').appendChild(t3);
+		console.log('gg');
+	}
+});
+
+document.getElementById('b2').addEventListener('click',function()
+{
+	if(document.getElementById('rb1').checked)
+	document.getElementById('t1').value = 'var element = document.getElementById("element-id");element.parentNode.removeChild(element);';
+    else if(document.getElementById('rb2').checked)
+	document.getElementById('t1').value = 'document.getElementById("myDIV").removeEventListener("mousemove", myFunction);';
+
+});
+</script>
+</html>
