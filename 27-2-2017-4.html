@@ -1,0 +1,26 @@
+<html>
+<script>
+electives = ['dm','pc'];
+i = 0;
+function hey()
+{
+
+}
+function abc()
+{
+p = document.createElement('p');
+t1 = document.createTextNode("Elective"+ (i + 1));
+t2 = document.createTextNode(electives[i]);
+p.appendChild(t1);
+p.appendChild(t2);
+i = i + 1;
+if(i == 2)
+i = 0;
+document.body.appendChild(p);
+p.addEventListener("click",function(){return (electives[0]);});//return "Elective"+ (i + 1) + electives[i];});
+}
+</script>
+<body>
+<input type = 'button' value = 'click' onclick="abc()">
+</body>
+</html>

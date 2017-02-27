@@ -1,0 +1,19 @@
+<html>
+<script>
+function hey()
+{
+alert('hello');
+}
+function abc()
+{
+bt1 = document.createElement('button');
+t1 = document.createTextNode('click');
+bt1.appendChild(t1);
+bt1.addEventListener("click",hey);
+document.body.appendChild(bt1);
+}
+</script>
+<body>
+<input type = 'button' value = 'click' onclick="abc()">
+</body>
+</html>
