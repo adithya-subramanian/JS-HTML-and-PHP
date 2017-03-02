@@ -1,0 +1,46 @@
+<html>
+<head>
+</head>
+<body>
+<input type = "text" id = "regno" onblur = "abc()">
+<input type = "button" id = "b1" value = "click" ondblclick = "def()"><br>
+</body>
+<script>
+function abc()
+{
+if(!(document.getElementById('regno').value[0] == 1 && document.getElementById('regno').value[1] == 0))
+{
+document.getElementById('b1').disabled = true;
+}
+}
+function def()
+{
+alert('a');
+c1 =  document.createElement('checkbox');
+t1 = document.createTextNode('Data Mining');
+//t2 = document.createTextNode('Pattern Classification');
+//t3 = document.createTextNode('Information Retreival');
+//t4 = document.createTextNode('Time Series Prediction');
+//c2 =  document.createElement('Checkbox');
+//c3 =  document.createElement('Checkbox');
+//c4 =  document.createElement('Checkbox');
+c1.appendChild(t1);
+//c2.appendChild(t2);
+//c3.appendChild(t3);
+//c4.appendChild(t4);
+c1.setAttribute("id",'Data Mining');
+//c2.setAttribute("id",'Pattern CLassification');
+//c3.setAttribute("id",'Information Retrieval');
+//c4.setAttribute("id",'Time Series');
+c1.addEventListener('click',function(){alert(document.getElementById('Data Mining').value)});
+//c2.addEventListener('click',function(){alert(document.getElementById('Data Mining').value)});
+//c3.addEventListener('click',function(){alert(document.getElementById('Data Mining').value)});
+//c4.addEventListener('click',function(){alert(document.getElementById('Data Mining').value)});
+document.body.appendChild(c1);
+//document.body.appendChild(c2);
+//document.body.appendChild(c3);
+//document.body.appendChild(c4);
+alert('hello');
+}
+</script>
+</html>
