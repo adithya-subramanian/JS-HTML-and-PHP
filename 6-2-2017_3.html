@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+<div id = 'd1'><p>div1</p><div id = 'd2'><p>div2</p><div id = 'd3'><p>hey</p></div></div></div>
+</body>
+<script>
+function abc(event)
+{
+j++;
+alert('this is capt' + j);
+console.log(event.target,Nodename);
+console.log(event.currentTarget,Nodename);
+}
+function xyz(event)
+{
+j--;
+alert('this is function bubble' + j);
+console.log(event.target,Nodename);
+console.log(event.currentTarget,Nodename);
+}
+j = 0;
+var k = document.getElementsByTagName('div');
+for(i = 0;i < k.length;i++)
+{
+k[i].addEventListener("click",abc,true);
+k[i].addEventListener("click",xyz,false);
+}
+</script>
+</html>

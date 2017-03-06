@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+<input type = 'radio' name = 'a' id = '1' onclick = 'abc(event)'>
+<input type = 'radio' name = 'a' id = '2' onclick = 'abc(event)'>
+<input type = 'button name = 'b' id = '3' onclick = 'abc(event)'>
+</body>
+<script>
+function abc(event)
+{
+alert(event.bubbles);
+alert(event.type);
+alert(event.target);
+alert(event.currentTarget);
+var a = document.getElementById("3");
+var evnt = a["onclick"];
+if (typeof(evnt) == "function") {
+    evnt.call(a);
+}
+}
+</script>
+</html>
