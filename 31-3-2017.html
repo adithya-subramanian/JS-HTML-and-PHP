@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function abc()
+{
+ob = new XMLHttpRequest();
+ob.onreadystatechange = function()
+{
+if(this.readyState ==  4 && this.status == 200)
+{
+document.getElementById('i1').innerHTML = this.responseText
+}
+}
+ob.open('post','abc.txt',true);
+ob.send();
+}
+</script>
+</head>
+<body>
+<p id  = 'i1'></p>
+<input type = 'button' onclick = 'abc()'>
+</body>
+</html>
