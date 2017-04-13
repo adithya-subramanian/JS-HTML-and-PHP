@@ -1,0 +1,27 @@
+<html>
+<head>
+<script >
+	function clicker()
+	{
+		alert('inside the button');
+		obj = new XMLHttpRequest();
+		obj.onreadystatechange = function()
+		{
+			if(this.readyState == 4 && this.status == 200)
+			{
+				document.getElementById('p1').innerHTML = obj.responseText;
+			}
+		}
+		obj.open("POST","13-4-2017.php",true);
+		
+		obj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		
+		obj.send('fun=abc&fun2=def');
+	}	
+</script>
+</head>
+<body>
+	<input type="button" onclick="clicker()" value = "click me">
+	<p id = 'p1'>
+</body>
+</html>
